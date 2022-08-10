@@ -15,6 +15,8 @@ public class BubbleSortByStep {
         for (int i = 0; i < list.length; i++) {
             System.out.println(list[i] + "\t");
         }
+        System.out.println("\nBegin sort processing...");
+        bubbleSortByStep(list);
     }
 
     public static void bubbleSortByStep(int[] list){
@@ -31,8 +33,16 @@ public class BubbleSortByStep {
                 }
             }
             if (needNextPass == false){
-                System.out.println("Array");
+                System.out.println("Array may be sorted and next pass not needed");
+                break;
             }
+            System.out.println("List after the "+ k + " sort: " );
+            for (int j = 0; j < list.length; j++) {
+                System.out.println(list[j] + "\t");
+            }
+            System.out.println();
         }
     }
+
+
 }
